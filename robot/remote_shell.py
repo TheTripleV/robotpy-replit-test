@@ -18,6 +18,9 @@ class RemoteShell:
 
         self.table = networktables.NetworkTables.getTable('Remote Shell')
         self.interpreter = code.InteractiveInterpreter(locals={"robot": robot, "r": robot})
+        self.table.putString("stdout", "")
+        self.table.putString("stdin", "")
+        networktables.NetworkTables.flush()
 
         def ep(entry):
             # print("got", entry.value.getRaw())

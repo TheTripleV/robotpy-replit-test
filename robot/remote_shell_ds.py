@@ -1,7 +1,10 @@
 import time
 import socket
 from networktables import NetworkTables
-import readline
+try:
+	import readline # just importing this modifies behavior
+except:
+	pass
 import networktables
 
 local_ip = socket.gethostbyname(socket.gethostname())
