@@ -5,6 +5,7 @@ description = ""
 authors = ["repl.it user <replituser@example.com>"]
 
 [tool.poetry.dependencies]
+python = "^3.9"
 pip = "^21"
 robotpy = { version = "^2021", extras = ["adi", "commands", "commands2", "ctre", "rev", "sim"]} # everything but navx
 
